@@ -1868,7 +1868,7 @@ const struct permonst mons[] = {
         SIZ(WT_HUMAN, 20, 0, MS_HUMANOID, MZ_HUMAN), MR_POISON, 0,
         M1_HUMANOID | M1_OMNIVORE | M1_POIS | M1_TPORT, M2_PEACEFUL,
         M3_INFRAVISIBLE,
-        CLR_CYAN),       
+        CLR_BRIGHT_MAGENTA),       
            
 /*
  * Rust monster or disenchanter
