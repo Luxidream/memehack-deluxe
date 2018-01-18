@@ -1851,7 +1851,7 @@ const struct permonst mons[] = {
         M1_MINDLESS | M1_OMNIVORE | M1_ACID | M1_POIS,
         M2_HOSTILE | M2_NEUTER, 0, CLR_GREEN),
 /*
- * Quantum mechanics
+ * Bizarre humanoids
  */
     MON("quantum mechanic", S_QUANTMECH,
         LVL(7, 12, 3, 10, 0), (G_GENO | 3),
@@ -1861,6 +1861,15 @@ const struct permonst mons[] = {
         M1_HUMANOID | M1_OMNIVORE | M1_POIS | M1_TPORT, M2_HOSTILE,
         M3_INFRAVISIBLE,
         CLR_CYAN),
+     MON("toriningen", S_TORININ,
+        LVL(20, 18, -5, 10, 0), (G_HELL | G_GENO | 1),
+        A(ATTK(AT_CLAW, AD_TLPT, 8, 6),
+          ATTK(AT_CLAW, AD_PHYS, 6, 6), ATTK(AT_BITE, AD_PHYS, 6, 6), NO_ATTK, NO_ATTK, NO_ATTK),
+        SIZ(WT_HUMAN, 20, 0, MS_HUMANOID, MZ_HUMAN), MR_POISON, 0,
+        M1_HUMANOID | M1_OMNIVORE | M1_POIS | M1_TPORT, M2_PEACEFUL,
+        M3_INFRAVISIBLE,
+        CLR_CYAN),       
+           
 /*
  * Rust monster or disenchanter
  */
