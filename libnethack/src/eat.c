@@ -581,7 +581,8 @@ givit(int type, const struct permonst *ptr, int scalefactor)
 
     case SLEEP_RES:
         if (!(HSleep_resistance & FROMOUTSIDE)) {
-            pline(msgc_intrgain, "You feel wide awake.");
+	    pline(msgc_intrgain, Hallucination ? "It's hard to say that you'd rather stay awake when you're asleep." :
+                  "You feel wide awake.");
             HSleep_resistance |= FROMOUTSIDE;
         }
         break;
@@ -1055,6 +1056,7 @@ start_tin(struct obj *otmp)
         case ORCISH_DAGGER:
         case ATHAME:
         case CRYSKNIFE:
+	case KNIFE:
             tmp = 3;
             break;
         case PICK_AXE:
@@ -1480,7 +1482,9 @@ eataccessory(struct obj *otmp)
             break;
         case RIN_SUSTAIN_ABILITY:
         case AMULET_OF_LIFE_SAVING:
+		pline(msgc_intrloss, "You feel like that was a waste of resources.");
         case AMULET_OF_REFLECTION:     /* nice try */
+		pline(msgc_intrloss, "Your stomach );
             /* can't eat Amulet of Yendor or fakes, and no oc_prop even if you
                could -3. */
             break;
